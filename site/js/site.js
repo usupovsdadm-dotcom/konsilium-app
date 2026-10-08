@@ -102,4 +102,120 @@
       });
     });
   }
+
+  /* 7. Форма заявки врача (FormSubmit AJAX) */
+  var form = document.getElementById('lf');
+  if (form) (function () {
+    var ENDPOINT = 'https://formsubmit.co/ajax/mmikhwork@gmail.com';
+    var apply = document.getElementById('apply');
+    var okBox = document.getElementById('lf-ok');
+    var alertBox = document.getElementById('lf-alert');
+    var btnLbl = form.querySelector('.lf-btn .lbl');
+    var first = document.getElementById('f-name');
+    var F = {
+      name: document.getElementById('f-name'), spec: document.getElementById('f-spec'),
+      city: document.getElementById('f-city'), phone: document.getElementById('f-phone'),
+      tg: document.getElementById('f-tg'), msg: document.getElementById('f-msg'),
+      ok: document.getElementById('f-ok'), hp: document.getElementById('f-hp')
+    };
+    var rules = {
+      name: function (v) { return v.trim().length < 2 ? 'Укажите имя и фамилию' : ''; },
+      spec: function (v) { return v.trim().length < 2 ? 'Укажите специальность' : ''; },
+      phone: function (v) {
+        var d = v.replace(/\D/g, '');
+        if (!d) return 'Укажите номер телефона';
+        return (d.length < 10 || d.length > 15 || /[^\d\s()+\-.]/.test(v)) ? 'Проверьте номер: например, +7 999 123-45-67' : '';
+      },
+      ok: function () { return F.ok.checked ? '' : 'Нужно согласие на обработку данных'; }
+    };
+    function errEl(k) { return document.getElementById('e-' + k); }
+    function check(k) {
+      var m = rules[k](F[k].value);
+      errEl(k).textContent = m;
+      if (m) F[k].setAttribute('aria-invalid', 'true'); else F[k].removeAttribute('aria-invalid');
+      return !m;
+    }
+    Object.keys(rules).forEach(function (k) {
+      var el = F[k];
+      el.addEventListener(k === 'ok' ? 'change' : 'blur', function () { if (k === 'ok' || el.value) check(k); });
+      el.addEventListener(k === 'ok' ? 'change' : 'input', function () { if (el.getAttribute('aria-invalid')) check(k); });
+    });
+    /* Telegram: «username» -> «@username» */
+    F.tg.addEventListener('blur', function () { var v = F.tg.value.trim(); if (v && !/^@|^https?:|^t\.me/i.test(v) && !/^\+?\d[\d\s()-]*$/.test(v)) F.tg.value = '@' + v; });
+
+    /* CTA «Стать врачом-партнёром» -> к форме + фокус на первом поле */
+    function goForm(e) {
+      if (e) e.preventDefault();
+      apply.classList.add('in');
+      var target = okBox.hidden ? first : document.getElementById('lf-ok-t');
+      apply.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      var done = false;
+      var fo = function () { if (done) return; done = true; try { target.focus({ preventScroll: true }); } catch (x) { target.focus(); } };
+      if (reduce) fo();
+      else { if ('onscrollend' in window) window.addEventListener('scrollend', fo, { once: true }); setTimeout(fo, 1100); }
+    }
+    $$('a[href="#apply"]').forEach(function (a) { a.addEventListener('click', goForm); });
+    if (location.hash === '#apply') setTimeout(function () { goForm(); }, 300);
+
+    var payload = null;
+    function collect() {
+      var dash = function (v) { v = (v || '').trim(); return v || '—'; };
+      return {
+        'Имя и фамилия': F.name.value.trim(),
+        'Специальность': F.spec.value.trim(),
+        'Город': dash(F.city.value),
+        'Телефон': F.phone.value.trim(),
+        'Telegram': dash(F.tg.value),
+        'Комментарий': dash(F.msg.value),
+        'Согласие на обработку персональных данных': 'Да',
+        'Страница': location.origin + location.pathname,
+        _subject: 'Новая заявка врача-партнёра — Консилиум',
+        _template: 'table',
+        _captcha: 'false',
+        _honey: F.hp.value
+      };
+    }
+    function busy(on) {
+      form.classList.toggle('busy', on);
+      form.setAttribute('aria-busy', on ? 'true' : 'false');
+      btnLbl.textContent = on ? 'Отправляем…' : 'Отправить заявку';
+    }
+    function success() {
+      okBox.style.minHeight = Math.min(form.offsetHeight, innerWidth < 641 ? 440 : 600) + 'px';
+      form.hidden = true; okBox.hidden = false;
+      var t = document.getElementById('lf-ok-t');
+      try { t.focus({ preventScroll: true }); } catch (x) { t.focus(); }
+      var r = apply.getBoundingClientRect();
+      if (r.top < 0 || r.top > innerHeight * 0.5) apply.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    }
+    function fail() { busy(false); alertBox.hidden = false; }
+    function send() {
+      alertBox.hidden = true; busy(true);
+      var ctl = ('AbortController' in window) ? new AbortController() : null;
+      var to = setTimeout(function () { if (ctl) ctl.abort(); }, 20000);
+      fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: ctl ? ctl.signal : undefined
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; });
+      }).then(function (res) {
+        clearTimeout(to);
+        if (res.ok && (res.j.success === true || res.j.success === 'true')) { busy(false); success(); }
+        else fail();
+      }).catch(function () { clearTimeout(to); fail(); });
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.classList.contains('busy')) return;
+      var bad = null;
+      ['name', 'spec', 'phone', 'ok'].forEach(function (k) { if (!check(k) && !bad) bad = F[k]; });
+      if (bad) { bad.focus(); return; }
+      if (F.hp.value) { success(); return; } /* бот заполнил скрытое поле */
+      payload = collect();
+      send();
+    });
+    document.getElementById('lf-retry').addEventListener('click', function () { if (payload) send(); });
+  })();
 })();
