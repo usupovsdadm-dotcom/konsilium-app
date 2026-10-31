@@ -1,0 +1,27 @@
+Wikimedia Commons, свободные лицензии (CC0/PD/CC BY/CC BY-SA). Файл	Название	Автор	Лицензия	Источник
+00.jpg	File:MRI brain sagittal section.jpg	everyone's idle	CC BY-SA 2.0	https://commons.wikimedia.org/wiki/File:MRI_brain_sagittal_section.jpg
+01.jpg	File:Sagittal MRI scan of brain of patient with Chiari malformation.jpg	Raymond F Sekula Jr, Peter J Jannetta, Kenneth F Casey, Edward M Marchan, L Kathleen Sekula and Christine S McCrady	CC BY 2.0	https://commons.wikimedia.org/wiki/File:Sagittal_MRI_scan_of_brain_of_patient_with_Chiari_malformation.jpg
+02.jpg	File:Axial PSIR MRI of a brain with multiple sclerosis lesions.jpg	Article authors: Alice Favaretto, Davide Poggiali, Andrea Lazzarotto, Giuseppe Rolma, Francesco Causin, Paolo Gallo	CC BY 4.0	https://commons.wikimedia.org/wiki/File:Axial_PSIR_MRI_of_a_brain_with_multiple_sclerosis_lesions.jpg
+03.jpg	File:MRI of head (with ramus).png	Asaf Cygelberg	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:MRI_of_head_(with_ramus).png
+04.jpg	File:Lumbar MRI t2-tse-rst-sagittal 10.jpg	Stillwaterising	CC0	https://commons.wikimedia.org/wiki/File:Lumbar_MRI_t2-tse-rst-sagittal_10.jpg
+05.jpg	File:Lumbar MRI t2-tse-rst-sagittal 05.jpg	Stillwaterising	CC0	https://commons.wikimedia.org/wiki/File:Lumbar_MRI_t2-tse-rst-sagittal_05.jpg
+06.jpg	File:Cervical Spine MRI showing degenerative changes.jpg	Stillwaterising	CC BY-SA 3.0	https://commons.wikimedia.org/wiki/File:Cervical_Spine_MRI_showing_degenerative_changes.jpg
+07.jpg	File:Knee MRI PD TSE FS Sagittal.jpg	Ptrump16	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:Knee_MRI_PD_TSE_FS_Sagittal.jpg
+08.jpg	File:Knee MRI T1 TSE Sagittal.jpg	Ptrump16	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:Knee_MRI_T1_TSE_Sagittal.jpg
+09.jpg	File:Eastern equine encephalitis head scans.jpg	Michael A. Silverman, John Misasi, Sandra Smole, Henry A. Feldman, Adam B. Cohen, Sandro Santagata, Michael McManus, and Asim A. Ahmed	Public domain	https://commons.wikimedia.org/wiki/File:Eastern_equine_encephalitis_head_scans.jpg
+10.jpg	File:Tomografia Computadorizada Joelho Direito-Esquerdo, projeção 3D.png	Falcão Alado	CC BY 4.0	https://commons.wikimedia.org/wiki/File:Tomografia_Computadorizada_Joelho_Direito-Esquerdo,_proje%C3%A7%C3%A3o_3D.png
+11.jpg	File:CT-Thorax-5.0-B70f-Lungs.jpg	Ptrump16	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:CT-Thorax-5.0-B70f-Lungs.jpg
+12.jpg	File:CT of a normal abdomen and pelvis, axial plane 47.png	Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None
+Mikael Häggström, M.D.	CC0	https://commons.wikimedia.org/wiki/File:CT_of_a_normal_abdomen_and_pelvis,_axial_plane_47.png
+13.jpg	File:Normal posteroanterior (PA) chest radiograph (X-ray).jpg	Mikael Häggström	CC0	https://commons.wikimedia.org/wiki/File:Normal_posteroanterior_(PA)_chest_radiograph_(X-ray).jpg
+14.jpg	File:Chest X-ray PA erect showing left upper lobe cavitation.png	Cerevisae	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:Chest_X-ray_PA_erect_showing_left_upper_lobe_cavitation.png
+15.jpg	File:First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand - 18951222.jpg	Wilhelm Röntgen	Public domain	https://commons.wikimedia.org/wiki/File:First_medical_X-ray_by_Wilhelm_R%C3%B6ntgen_of_his_wife_Anna_Bertha_Ludwig%27s_hand_-_18951222.jpg
+16.jpg	File:Radiograph with knee angles.jpg	Hiroshi Inui, Shuji Taketomi, Kensuke Nakamura, Seira Takei, Hideki Takeda, Sakae Tanaka and Takumi Nakagawa	CC BY 2.0	https://commons.wikimedia.org/wiki/File:Radiograph_with_knee_angles.jpg
+17.jpg	File:Basic panoramic radiograph.jpg	w: Coronation Dental Specialty Group	CC BY 3.0	https://commons.wikimedia.org/wiki/File:Basic_panoramic_radiograph.jpg
+18.jpg	File:Panoramic radiograph of historic dental implants.jpg	Dentistxxx	CC BY-SA 3.0	https://commons.wikimedia.org/wiki/File:Panoramic_radiograph_of_historic_dental_implants.jpg
+19.jpg	File:US Navy 100403-N-7062A-087 Hosptial Corpsman 3rd Class Adrian Eady performs a bitewing X-ray on Hospital Corpsman 2nd Class John Edstrom.jpg	U.S. Navy photo	Public domain	https://commons.wikimedia.org/wiki/File:US_Navy_100403-N-7062A-087_Hosptial_Corpsman_3rd_Class_Adrian_Eady_performs_a_bitewing_X-ray_on_Hospital_Corpsman_2nd_Class_John_Edstrom.jpg
+20.jpg	File:Obstetric ultrasound scan monitor showing 20-week human fetus profile in Navi Mumbai 2015.jpg	Goleisureintl	CC BY 4.0	https://commons.wikimedia.org/wiki/File:Obstetric_ultrasound_scan_monitor_showing_20-week_human_fetus_profile_in_Navi_Mumbai_2015.jpg
+21.jpg	File:Fetal Anomaly Ultrasound Scan in Navi Mumbai.jpg	Goleisureintl	CC BY 4.0	https://commons.wikimedia.org/wiki/File:Fetal_Anomaly_Ultrasound_Scan_in_Navi_Mumbai.jpg
+22.jpg	File:Ultrasound liver right lobe and right kidney.jpg	Ptrump16	CC BY-SA 4.0	https://commons.wikimedia.org/wiki/File:Ultrasound_liver_right_lobe_and_right_kidney.jpg
+23.jpg	File:12 lead ECG.jpg	Peterhcharlton	CC BY 4.0	https://commons.wikimedia.org/wiki/File:12_lead_ECG.jpg
+24.jpg	File:12 lead generated sinus rhythm.JPG	Glenlarson	Public domain	https://commons.wikimedia.org/wiki/File:12_lead_generated_sinus_rhythm.JPG
